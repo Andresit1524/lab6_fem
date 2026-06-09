@@ -2,7 +2,7 @@
 #show: style
 
 = Informe laboratorio 6
-== [Título]
+== Uso del puente de Wheatstone para medir resistencias desconocidas
 
 #align(center)[
   #columns(2)[
