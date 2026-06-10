@@ -1,4 +1,4 @@
-#import "style.typ": *
+#import "snippets/style.typ": *
 #show: style
 
 = Informe laboratorio 6

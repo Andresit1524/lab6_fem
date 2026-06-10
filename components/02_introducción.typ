@@ -38,6 +38,8 @@ $
 
 Igualando y desarrollando:
 
+#set math.equation(numbering: "(1)")
+
 $
   V/(R_1 + R_2) R_1 & = V/(R_3 + R_X) R_3 \
     R_1/(R_1 + R_2) & = R_3/(R_3 + R_X) \
@@ -47,9 +49,38 @@ $
                 R_X & = boxed((R_2 R_3)/R_1) \
 $
 
+<eq1_rx_using_r1_r2>
+
+#set math.equation(numbering: none)
+
 Obteniendo así la ecuación para obtener la resistencia desconocida con las demás. Pero por supuesto, recordemos que esto implica variar $R_2$ para lograr ese equilibrio. ¿Cual es el valor de esa resistencia?
 
 === Resistencia de un alambre
-Para la resistencia 2, vamos a usar un contacto deslizandose sobre un alambre, como se puede ver en la @figura_2_foto.
+Para la resistencia 2, vamos a usar un contacto deslizandose sobre un alambre, como se puede ver en la @figura_2_foto. Este alambre, separado por el contacto cumple el rol de $R_1$ y $R_2$, y los valores de estos se basan en la longitud de longitud de los alambres. La resistencia de un alambre es:
 
-// ! Esta parte está pendiente
+$
+  R = rho/A L
+$
+
+Donde $rho$ es la resistividad del alambre y $A$ es el área transversal de la misma. Aplicado a los dos alambres:
+
+$
+  R_1 & = rho/A L_1 \
+  R_2 & = rho/A L_2 \
+$
+
+Y los sustituimos en la @eq1_rx_using_r1_r2 para calcular $R_X$:
+
+#set math.equation(numbering: "(1)")
+
+$
+  R_X & = (R_2 R_3)/R_1 \
+  R_X & = (cancel(display(rho/A)) L_2 R_3)/(cancel(display(rho/A)) L_1) \
+  R_X & = boxed(L_2/L_1 R_3) \
+$
+
+<eq2_rx_using_l1-l2>
+
+#set math.equation(numbering: none)
+
+Por lo que atenderemos esta fórmula para calcular $R_X$ de ahora en adelante.

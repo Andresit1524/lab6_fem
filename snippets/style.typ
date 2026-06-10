@@ -2,6 +2,9 @@
   set text(font: "Cambria", size: 11pt, lang: "es")
   show math.equation: set text(font: "Cambria Math", size: 11pt)
 
+  show link: set text(fill: blue)
+  show ref: set text(fill: navy)
+
   show heading: set block(above: 1.5em, below: 1em)
   show heading.where(level: 1): set align(center)
   show heading.where(level: 1): set text(1.3em)
