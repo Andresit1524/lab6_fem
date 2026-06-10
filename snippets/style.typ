@@ -1,10 +1,9 @@
-#let style(project) = {
+#let style(body) = {
+  // Texto base
   set text(font: "Cambria", size: 11pt, lang: "es")
   show math.equation: set text(font: "Cambria Math", size: 11pt)
 
-  show link: set text(fill: blue)
-  show ref: set text(fill: navy)
-
+  // Títulos
   show heading: set block(above: 1.5em, below: 1em)
   show heading.where(level: 1): set align(center)
   show heading.where(level: 1): set text(1.3em)
@@ -16,10 +15,17 @@
   //   it
   // }
 
-  project
+  // Links
+  show link: set text(fill: blue)
+  show ref: set text(fill: navy)
+
+  // Listas
+  set list(indent: 1.5em)
+  set enum(indent: 1.5em)
+
+  body
 }
 
-// Callout
 #let callout(color: rgb("#ffffff00"), body) = rect(
   width: 100%,
   fill: color,

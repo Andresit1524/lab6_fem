@@ -1,8 +1,12 @@
 #import "snippets/style.typ": *
+#import "snippets/dark.typ": *
 #show: style
+#show: dark
 
 = Informe laboratorio 6
 == Uso del puente de Wheatstone para medir resistencias desconocidas
+
+#line(length: 100%)
 
 #align(center)[
   #columns(2)[
@@ -22,8 +26,13 @@
   ]
 ]
 
-#pagebreak(weak: true)
+#line(length: 100%)
+
+#v(1em)
+
 #include "components/01_resumen.typ"
+
+// Componentes
 
 #pagebreak(weak: true)
 #include "components/02_introducción.typ"

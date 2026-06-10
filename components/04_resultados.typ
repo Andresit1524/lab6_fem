@@ -30,20 +30,30 @@ $
 === Medidos con el puente y calculados
 Las mediciones de las longitudes del puente de Wheatstone y los valores de $R_X$ calculados usando la @eq2_rx_using_l1-l2 se describen en las siguientes tablas para cada resistencia de la $R_A$ a la $R_D$.
 
+// Datos de resistencia
+// ? Convención de columnas:
+// ? - 0: Resistencia de la caja (R3)
+// ? - 1: L1
+// ? - 2: L2
+#let RA = r_a.slice(1).map(it => (it, [#rx(it.at(1), it.at(2), it.at(0))]))
+#let RB = r_b.slice(1).map(it => (it, [#rx(it.at(1), it.at(2), it.at(0))]))
+#let RC = r_c.slice(1).map(it => (it, [#rx(it.at(1), it.at(2), it.at(0))]))
+#let RD = r_d.slice(1).map(it => (it, [#rx(it.at(1), it.at(2), it.at(0))]))
+
+// TODO: Hacer funcionar la notación matemática en los encabezados
+
 #columns(2)[
   #figure(caption: [Resultados para la resistencia $R_A$])[
     #table(
-      columns: r_a.at(0).len() + 1,
+      columns: 4,
       align: center,
       inset: .6em,
       table.header(..(r_a.at(0).map(it => [*#it*])), [*RA*]),
-      ..(
-        r_a
-          .slice(1)
-          .map(
-            it => (it, [#rx(it.at(1), it.at(2), it.at(0))]),
-          )
-      ).flatten()
+      // Datos y cálculos
+      ..RA.flatten(),
+      // Promedio
+      table.cell(colspan: 3, stroke: none)[],
+      [#(RA.map(it => calc.round(float(it.at(1).text))).sum() / 10)],
     )
   ]
 
@@ -51,17 +61,15 @@ Las mediciones de las longitudes del puente de Wheatstone y los valores de $R_X$
 
   #figure(caption: [Resultados para la resistencia $R_B$])[
     #table(
-      columns: r_b.at(0).len() + 1,
+      columns: 4,
       align: center,
       inset: .6em,
       table.header(..(r_b.at(0).map(it => [*#it*])), [*RB*]),
-      ..(
-        r_b
-          .slice(1)
-          .map(
-            it => (it, [#rx(it.at(1), it.at(2), it.at(0))]),
-          )
-      ).flatten()
+      // Datos y cálculos
+      ..RB.flatten(),
+      // Promedio
+      table.cell(colspan: 3, stroke: none)[],
+      [#(RB.map(it => calc.round(float(it.at(1).text))).sum() / 10)],
     )
   ]
 
@@ -69,17 +77,15 @@ Las mediciones de las longitudes del puente de Wheatstone y los valores de $R_X$
 
   #figure(caption: [Resultados para la resistencia $R_C$])[
     #table(
-      columns: r_c.at(0).len() + 1,
+      columns: 4,
       align: center,
       inset: .6em,
       table.header(..(r_c.at(0).map(it => [*#it*])), [*RC*]),
-      ..(
-        r_c
-          .slice(1)
-          .map(
-            it => (it, [#rx(it.at(1), it.at(2), it.at(0))]),
-          )
-      ).flatten()
+      // Datos y cálculos
+      ..RC.flatten(),
+      // Promedio
+      table.cell(colspan: 3, stroke: none)[],
+      [#(RC.map(it => calc.round(float(it.at(1).text))).sum() / 10)],
     )
   ]
 
@@ -87,17 +93,15 @@ Las mediciones de las longitudes del puente de Wheatstone y los valores de $R_X$
 
   #figure(caption: [Resultados para la resistencia $R_D$])[
     #table(
-      columns: r_d.at(0).len() + 1,
+      columns: 4,
       align: center,
       inset: .6em,
       table.header(..(r_d.at(0).map(it => [*#it*])), [*RD*]),
-      ..(
-        r_d
-          .slice(1)
-          .map(
-            it => (it, [#rx(it.at(1), it.at(2), it.at(0))]),
-          )
-      ).flatten()
+      // Datos y cálculos
+      ..RD.flatten(),
+      // Promedio
+      table.cell(colspan: 3, stroke: none)[],
+      [#(RD.map(it => calc.round(float(it.at(1).text))).sum() / 10)],
     )
   ]
 ]
