@@ -7,7 +7,7 @@
             "command": "typst watch main.typ",
             "group": "none",
             "presentation": {
-                "reveal": "always",
+                "reveal": "silent",
                 "panel": "new"
             },
             "runOptions": {
