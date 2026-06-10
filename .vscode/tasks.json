@@ -4,7 +4,7 @@
         {
             "label": "Typst Watch",
             "type": "shell",
-            "command": "typst watch main.typ",
+            "command": "typst watch main.typ \"G4 - LAB #6 - 1031651242 1011322094 1072072933 1022358465.pdf\"",
             "group": "none",
             "presentation": {
                 "reveal": "silent",
