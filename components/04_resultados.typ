@@ -9,25 +9,29 @@
 == Resultados
 
 === Teóricos y medidos con multímetro
-Los resultados teóricos son los valores leidos de las 4 resistencias. Los valores obtenidos para cada una son:
+#columns(2)[
+  Los resultados teóricos son los valores leidos de las 4 resistencias. Los valores obtenidos para cada una son:
 
-$
-  R_A & = 820 space upright(Omega) \
-  R_B & = 2690 space upright(Omega) \
-  R_C & = 6800 space upright(Omega) \
-  R_D & = 2200 space upright(Omega)
-$
+  $
+    R_A & = 820 space upright(Omega) \
+    R_B & = 2690 space upright(Omega) \
+    R_C & = 6800 space upright(Omega) \
+    R_D & = 2200 space upright(Omega)
+  $
 
-Todas las resistencias tienen una tolerancia de $5%$.
+  #colbreak()
 
-También se midieron las resistencias directamente con un multímetro. Los valores obtenidos son:
+  También se midieron las resistencias directamente con un multímetro. Los valores obtenidos son:
 
-$
-  R_A & = 810 space upright(Omega) \
-  R_B & = 2690 space upright(Omega) \
-  R_C & = 6830 space upright(Omega) \
-  R_D & = 2190 space upright(Omega)
-$
+  $
+    R_A & = 810 space upright(Omega) \
+    R_B & = 2690 space upright(Omega) \
+    R_C & = 6830 space upright(Omega) \
+    R_D & = 2190 space upright(Omega)
+  $
+]
+
+Todas las resistencias tienen una tolerancia de $plus.minus 5%$.
 
 === Medidos con el puente y calculados
 Las mediciones de las longitudes del puente de Wheatstone y los valores de $R_X$ calculados usando la @eq2_rx_using_l1-l2 se describen en las siguientes tablas para cada resistencia de la $R_A$ a la $R_D$.
@@ -57,7 +61,7 @@ Las mediciones de las longitudes del puente de Wheatstone y los valores de $R_X$
       table.cell(colspan: 3, stroke: none)[],
       [$#(RA.map(it => calc.round(float(it.at(1).text))).sum() / 10) space Omega$],
     )
-  ]
+  ] <table_1>
 
   #colbreak()
 
@@ -73,7 +77,7 @@ Las mediciones de las longitudes del puente de Wheatstone y los valores de $R_X$
       table.cell(colspan: 3, stroke: none)[],
       [$#(RB.map(it => calc.round(float(it.at(1).text))).sum() / 10) space Omega$],
     )
-  ]
+  ] <table_2>
 
   #colbreak()
 
@@ -89,7 +93,7 @@ Las mediciones de las longitudes del puente de Wheatstone y los valores de $R_X$
       table.cell(colspan: 3, stroke: none)[],
       [$#(RC.map(it => calc.round(float(it.at(1).text))).sum() / 10) space Omega$],
     )
-  ]
+  ] <table_3>
 
   #colbreak()
 
@@ -105,5 +109,5 @@ Las mediciones de las longitudes del puente de Wheatstone y los valores de $R_X$
       table.cell(colspan: 3, stroke: none)[],
       [$#(RD.map(it => calc.round(float(it.at(1).text))).sum() / 10) space Omega$],
     )
-  ]
+  ] <table_4>
 ]
