@@ -18,6 +18,8 @@ $
   R_D & = 2200 space upright(Omega)
 $
 
+Todas las resistencias tienen una tolerancia de $5%$.
+
 También se midieron las resistencias directamente con un multímetro. Los valores obtenidos son:
 
 $
@@ -50,10 +52,10 @@ Las mediciones de las longitudes del puente de Wheatstone y los valores de $R_X$
       inset: .6em,
       table.header(..(r_a.at(0).map(it => [*#it*])), [*RA*]),
       // Datos y cálculos
-      ..RA.flatten(),
+      ..RA.map(it => format_row(it)).flatten(),
       // Promedio (10 muestras)
       table.cell(colspan: 3, stroke: none)[],
-      [#(RA.map(it => calc.round(float(it.at(1).text))).sum() / 10)],
+      [$#(RA.map(it => calc.round(float(it.at(1).text))).sum() / 10) space Omega$],
     )
   ]
 
@@ -66,10 +68,10 @@ Las mediciones de las longitudes del puente de Wheatstone y los valores de $R_X$
       inset: .6em,
       table.header(..(r_b.at(0).map(it => [*#it*])), [*RB*]),
       // Datos y cálculos
-      ..RB.flatten(),
+      ..RB.map(it => format_row(it)).flatten(),
       // Promedio (10 muestras)
       table.cell(colspan: 3, stroke: none)[],
-      [#(RB.map(it => calc.round(float(it.at(1).text))).sum() / 10)],
+      [$#(RB.map(it => calc.round(float(it.at(1).text))).sum() / 10) space Omega$],
     )
   ]
 
@@ -82,10 +84,10 @@ Las mediciones de las longitudes del puente de Wheatstone y los valores de $R_X$
       inset: .6em,
       table.header(..(r_c.at(0).map(it => [*#it*])), [*RC*]),
       // Datos y cálculos
-      ..RC.flatten(),
+      ..RC.map(it => format_row(it)).flatten(),
       // Promedio (10 muestras)
       table.cell(colspan: 3, stroke: none)[],
-      [#(RC.map(it => calc.round(float(it.at(1).text))).sum() / 10)],
+      [$#(RC.map(it => calc.round(float(it.at(1).text))).sum() / 10) space Omega$],
     )
   ]
 
@@ -98,10 +100,10 @@ Las mediciones de las longitudes del puente de Wheatstone y los valores de $R_X$
       inset: .6em,
       table.header(..(r_d.at(0).map(it => [*#it*])), [*RD*]),
       // Datos y cálculos
-      ..RD.flatten(),
+      ..RD.map(it => format_row(it)).flatten(),
       // Promedio (10 muestras)
       table.cell(colspan: 3, stroke: none)[],
-      [#(RD.map(it => calc.round(float(it.at(1).text))).sum() / 10)],
+      [$#(RD.map(it => calc.round(float(it.at(1).text))).sum() / 10) space Omega$],
     )
   ]
 ]

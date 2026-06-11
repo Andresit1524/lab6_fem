@@ -8,3 +8,17 @@
   float(l2) / float(l1) * float(r3),
   digits: 3,
 )
+
+/// Notación matemática para cada elemento de las tablas
+///
+/// - content (content):
+/// -> array
+#let format_row(content) = {
+  let flat = content.flatten()
+  (
+    [$#flat.at(0) space upright(Omega)$],
+    [$#flat.at(1) "cm"$],
+    [$#flat.at(2) "cm"$],
+    [$#flat.at(3) space upright(Omega)$],
+  )
+}
