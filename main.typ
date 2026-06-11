@@ -1,7 +1,7 @@
 #import "snippets/style.typ": *
 #import "snippets/dark.typ": *
 #show: style
-#show: dark
+// #show: dark
 
 = Informe laboratorio 6
 == Uso del puente de Wheatstone para medir resistencias desconocidas

@@ -51,7 +51,7 @@ Las mediciones de las longitudes del puente de Wheatstone y los valores de $R_X$
       table.header(..(r_a.at(0).map(it => [*#it*])), [*RA*]),
       // Datos y cálculos
       ..RA.flatten(),
-      // Promedio
+      // Promedio (10 muestras)
       table.cell(colspan: 3, stroke: none)[],
       [#(RA.map(it => calc.round(float(it.at(1).text))).sum() / 10)],
     )
@@ -67,7 +67,7 @@ Las mediciones de las longitudes del puente de Wheatstone y los valores de $R_X$
       table.header(..(r_b.at(0).map(it => [*#it*])), [*RB*]),
       // Datos y cálculos
       ..RB.flatten(),
-      // Promedio
+      // Promedio (10 muestras)
       table.cell(colspan: 3, stroke: none)[],
       [#(RB.map(it => calc.round(float(it.at(1).text))).sum() / 10)],
     )
@@ -83,7 +83,7 @@ Las mediciones de las longitudes del puente de Wheatstone y los valores de $R_X$
       table.header(..(r_c.at(0).map(it => [*#it*])), [*RC*]),
       // Datos y cálculos
       ..RC.flatten(),
-      // Promedio
+      // Promedio (10 muestras)
       table.cell(colspan: 3, stroke: none)[],
       [#(RC.map(it => calc.round(float(it.at(1).text))).sum() / 10)],
     )
@@ -99,7 +99,7 @@ Las mediciones de las longitudes del puente de Wheatstone y los valores de $R_X$
       table.header(..(r_d.at(0).map(it => [*#it*])), [*RD*]),
       // Datos y cálculos
       ..RD.flatten(),
-      // Promedio
+      // Promedio (10 muestras)
       table.cell(colspan: 3, stroke: none)[],
       [#(RD.map(it => calc.round(float(it.at(1).text))).sum() / 10)],
     )

@@ -3,7 +3,7 @@
 
 == Introducción
 
-=== ¿Qué es el puente de Wheatstone?
+=== El puente de Wheatstone
 El puente de Wheatstone es un circuito que nos permite determinar la resistencia de un componente cuando no lo conocemos. Fue inventado por Samuel Hunter Christie en 1833 y perfeccionado por Charles Wheatstone en 1843, por eso su nombre.
 
 El circuito es el siguiente.
@@ -17,7 +17,7 @@ La segunda resistencia ($R_2$) es variable, lo cual necesitaremos más tarde.
 === Fundamento teórico del sistema
 El objetivo del puente de Wheatstone es calcular $R_X$. Sabemos que la corriente que sale de la fuente pasa por dos caminos:
 
-+ Por las resistencias $R_1$ y $R_2$. Llamaremos a esta corriente $I_B$
++ Por las resistencias $R_1$ y $R_2$. Llamaremos a esta corriente $I_A$
 + Por las resistencias $R_3$ y $R_X$. Llamarmos a esta corriente $I_B$
 
 Si variamos $R_2$ para que las corrientes se equlibren, obtenemos que $I_A = I_B$ y por ende ninguna corriente pasa por el galvanómetro, por equilibrio de voltajes. Y el voltaje en ambos caminos siempre es el mismo porque forman mallas cerradas y independientes, con la fuente.
@@ -56,7 +56,7 @@ $
 Obteniendo así la ecuación para obtener la resistencia desconocida dadas las demás. Pero por supuesto, recordemos que esto implica variar $R_2$ para lograr ese equilibrio. ¿Cual es el valor de esa resistencia?
 
 === Resistencia de un alambre
-La resistencia 2, que es parte del puente de Wheatstone, usa un contacto deslizandose sobre un alambre, como se puede ver en la @figura_2_foto. Este alambre, separado por el contacto cumple el rol de $R_1$ y $R_2$, de hecho, y los valores de estos se basan en la longitud de longitud de los alambres. La resistencia de un alambre es:
+La resistencia 2, que es parte del puente de Wheatstone, usa un contacto deslizandose sobre un alambre, como se puede ver en la @figura_2_foto. Este alambre, separado por el contacto *cumple el rol de $R_1$ y $R_2$, de hecho*, y los valores de estos se basan en la longitud de longitud de los alambres. La resistencia de un alambre es:
 
 $
   R = rho/A L
@@ -82,4 +82,6 @@ $
 
 #set math.equation(numbering: none)
 
-Por lo que atenderemos esta fórmula para calcular $R_X$ de ahora en adelante.
+Por lo que atenderemos a esta fórmula para calcular $R_X$ de ahora en adelante.
+
+Al final vemos que lo importante es cumplir un equilibrio de corrientes, independientemente de cuales resistencias son fijas y cuales son variables.
