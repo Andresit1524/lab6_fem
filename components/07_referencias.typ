@@ -1,2 +1,2 @@
 == Referencias
-- https://allen.in/jee/physics/wheatstone-bridge
+- Allen (s.f.). _Wheatstone Bridge_. https://allen.in/jee/physics/wheatstone-bridge

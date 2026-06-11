@@ -49,5 +49,5 @@
 #pagebreak(weak: true)
 #include "components/06_conclusión.typ"
 
-#pagebreak(weak: true)
+// #pagebreak(weak: true)
 #include "components/07_referencias.typ"
